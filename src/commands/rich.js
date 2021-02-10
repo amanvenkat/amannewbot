@@ -1,6 +1,7 @@
-const discord = require('discord.js-light');
+//const discord = require('discord.js-light');
 const models = require('../data/models.js');
 const util = require('../data/util.js');
+const discord = require('discord.js');
 
 module.exports = {
     name: 'rich',
