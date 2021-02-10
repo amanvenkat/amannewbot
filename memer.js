@@ -1,6 +1,9 @@
 /** packages */
 const fs = require('fs');
 const mong = require('mongoose');
+const discord = require('discord.js-light');
+//const discord = require('discord.js');
+const memer = new discord.Client()
 /** config n util n models */
 //const config = require('./src/data/config.json');
 const util = require('./src/data/util.js');
@@ -19,9 +22,6 @@ memer.on('ready', async () => {
        .then(console.log('Active'))
 })
 /** actual bot login things etc */
-const discord = require('discord.js-light');
-const discord = require('discord.js');
-const memer = new discord.Client()
 ({
     cacheGuilds: true,
     cacheChannels: true,
