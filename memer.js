@@ -12,15 +12,17 @@ const mongOptions = {
     useFindAndModify: true
 }
 
-Client.on('ready', async () => {
+memer.on('ready', async () => {
     console.log('Active')
 
     await mong.connect(process.env.MONGOURL, mongOptions)
        .then(console.log('Active'))
 })
 /** actual bot login things etc */
-const Discord = require('discord.js');
-const Client = new Discord.Client({
+const discord = require('discord.js-light');
+//const Discord = require('discord.js');
+const memer = new discord.Client()
+({
     cacheGuilds: true,
     cacheChannels: true,
     cacheEmojis: true,
