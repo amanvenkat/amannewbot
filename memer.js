@@ -5,7 +5,7 @@ const mong = require('mongoose');
 //const config = require('./src/data/config.json');
 const util = require('./src/data/util.js');
 /** database */
-mong.connect(`mongodb://${process.env.MONGODB_USER}:${process.env.MONGODB_PWD}@localhost:27017/Admin`, {
+mong.connect(process.env.MONGOURL, {
     useFindAndModify: false,
     useNewUrlParser: true,
     useUnifiedTopology: true
