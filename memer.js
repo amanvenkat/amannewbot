@@ -20,8 +20,8 @@ memer.on('ready', async () => {
 })
 /** actual bot login things etc */
 const discord = require('discord.js-light');
-const piscord = require('discord.js');
-const memer = new piscord.Client()
+const discord = require('discord.js');
+const memer = new discord.Client()
 ({
     cacheGuilds: true,
     cacheChannels: true,
