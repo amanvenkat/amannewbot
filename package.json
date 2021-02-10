@@ -1,0 +1,24 @@
+{
+  "name": "dank-memer-ripoff-main",
+  "version": "1.0.0",
+  "description": "I modified **OLD** Dank Memers publicly available src-code, lol (and made it even worse lmaooo)",
+  "main": "memer.js",
+  "dependencies": {
+    "discord.js-light": "^3.5.3",
+    "mongoose": "^5.11.15"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amanvenkat/amannewbot.git"
+  },
+  "author": "Aman V",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amanvenkat/amannewbot/issues"
+  },
+  "homepage": "https://github.com/amanvenkat/amannewbot#readme"
+}
