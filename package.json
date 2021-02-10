@@ -4,6 +4,7 @@
   "description": "I modified **OLD** Dank Memers publicly available src-code, lol (and made it even worse lmaooo)",
   "main": "memer.js",
   "dependencies": {
+    "discord.js": "^12.5.1",
     "discord.js-light": "^3.5.3",
     "mongoose": "^5.11.15"
   },

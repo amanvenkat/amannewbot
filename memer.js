@@ -19,7 +19,7 @@ memer.on('ready', async () => {
        .then(console.log('Active'))
 })
 /** actual bot login things etc */
-const discord = require('discord.js-light');
+const discord = require('discord.js');
 const memer = new discord.Client({
     cacheGuilds: true,
     cacheChannels: true,
