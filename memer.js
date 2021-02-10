@@ -5,11 +5,19 @@ const mong = require('mongoose');
 //const config = require('./src/data/config.json');
 const util = require('./src/data/util.js');
 /** database */
-mong.connect(process.env.MONGOURL, {
-    useFindAndModify: false,
+
+const mongOptions = {
     useNewUrlParser: true,
-    useUnifiedTopology: true
-}).then(() => console.log('connected db'));
+    useUnifiedTopology: true,
+    useFindAndModify: true
+}
+
+memer.on('ready', async () => {
+    console.log('Active')
+
+    await mong.connect(process.env.MONGOURL, mongOptions)
+       .then(console.log('Active'))
+})
 /** actual bot login things etc */
 const discord = require('discord.js-light');
 const memer = new discord.Client({
