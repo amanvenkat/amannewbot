@@ -2,10 +2,10 @@
 const fs = require('fs');
 const mong = require('mongoose');
 /** config n util n models */
-const config = require('./src/data/config.json');
+//const config = require('./src/data/config.json');
 const util = require('./src/data/util.js');
 /** database */
-mong.connect(`mongodb://localhost:27017/admin`, {
+mong.connect(`mongodb://${process.env.MONGODB_USER}:${process.env.MONGODB_PWD}@localhost:27017/Admin`, {
     useFindAndModify: false,
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -49,7 +49,7 @@ const memer = new discord.Client({
         'VOICE_SERVER_UPDATE'
     ]
 });
-memer.login(config.token);
+memer.login(process.env.TOKEN);
 /** commands */
 memer.commands = new discord.Collection();
 /** load cmds */

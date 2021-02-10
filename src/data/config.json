@@ -1,7 +1,10 @@
 {
     "coin": "https://secure.webtoolhub.com/static/resources/icons/set3/7fdca93551ce.png",
-    "mongodb": "mongodb://localhost:27017/admin",
+    "mongodb":{
+        "user":"",
+        "pwd":""
+    },
     "prefixes": ["do", "<@botid>", "<@!botid>"],
     "support": "803943928381440030",
-    "token": "ODA4MzUwMTMwMzUyNTU0MDA0.YCFQuQ.JrFlzHGE_0OCju4kAmOvH_1OKqY"
+    "token": ""
 }
