@@ -14,8 +14,7 @@ const mongOptions = {
     useUnifiedTopology: true,
     useFindAndModify: true
 }
-
-memer.on('ready', async () => {
+memer.once('ready', async () => {
     console.log('Active')
 
     await mong.connect(process.env.MONGOURL, mongOptions)
