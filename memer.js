@@ -12,7 +12,7 @@ const mongOptions = {
     useFindAndModify: true
 }
 
-memer.on('ready', async () => {
+Client.on('ready', async () => {
     console.log('Active')
 
     await mong.connect(process.env.MONGOURL, mongOptions)
