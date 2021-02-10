@@ -11,10 +11,10 @@ mong.connect(`mongodb://${process.env.MONGODB_USER}:${process.env.MONGODB_PWD}@l
     useUnifiedTopology: true
 })
 .then((_) => {
-    console.log('connected db')
-    }).catch(() => {
-        console.error()
-      })
+console.log('connected db')
+}).catch(() => {
+    console.error()
+  })
 
 /** actual bot login things etc */
 const discord = require('discord.js-light');
