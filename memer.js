@@ -9,11 +9,7 @@ mong.connect(process.env.MONGOURL, {
     useFindAndModify: false,
     useNewUrlParser: true,
     useUnifiedTopology: true
-})
-.then(() => console.log('connected db'))
-.catch( (err) => {
-  throw err
-})
+}).then(() => console.log('connected db'));
 /** actual bot login things etc */
 const discord = require('discord.js-light');
 const memer = new discord.Client({
