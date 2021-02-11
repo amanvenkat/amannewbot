@@ -51,14 +51,11 @@ const mongOptions = {
     useUnifiedTopology: true,
     useFindAndModify: true
 }
-memer.on('ready', async () => {
+memer.on('ready', () => {
     console.log('Active')
 
-await mong.connect(process.env.MONGOURL, mongOptions)
+mong.connect(process.env.MONGOURL, mongOptions)
        .then(console.log('Active'))
-})
-.catch(e => {
-    console.log(e);
 })
 
 memer.login(process.env.TOKEN);
