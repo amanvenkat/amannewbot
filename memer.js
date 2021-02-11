@@ -8,7 +8,7 @@ const discord = require('discord.js-light');
 const util = require('./src/data/util.js');
 /** database */
 /** actual bot login things etc */
-const memer = discord.Client({
+const memer = new discord.Client({
     cacheGuilds: true,
     cacheChannels: true,
     cacheEmojis: true,
@@ -56,6 +56,8 @@ memer.on('ready', async () => {
 
     await mong.connect(process.env.MONGOURL, mongOptions)
        .then(console.log('Active'))
+.catch(err) 
+    console.log(err)
 })
 memer.login(process.env.TOKEN);
 /** commands */
