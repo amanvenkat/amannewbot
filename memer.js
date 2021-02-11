@@ -54,8 +54,11 @@ const mongOptions = {
 memer.on('ready', async () => {
     console.log('Active')
 
-mong.connect(process.env.MONGOURL, mongOptions)
+await mong.connect(process.env.MONGOURL, mongOptions)
        .then(console.log('Active'))
+})
+.catch(e => {
+    console.log(e);
 })
 
 memer.login(process.env.TOKEN);
