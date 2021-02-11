@@ -57,6 +57,9 @@ memer.on('ready', async () => {
     await mong.connect(process.env.MONGOURL, mongOptions)
        .then(console.log('Active'))
 })
+.catch( (err) => {
+    throw err
+  })
 
 memer.login(process.env.TOKEN);
 /** commands */
