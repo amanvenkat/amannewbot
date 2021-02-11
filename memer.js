@@ -52,9 +52,8 @@ const mongOptions = {
     useFindAndModify: true
 }
 memer.on('ready', async () => {
-    console.log('Active')
 
-    await mong.connect(process.env.MONGOURL, mongOptions)
+    await mong.connect(process.env.MONGOURL), (mongOptions)
        .then(console.log('Active'))
 .catch(err) 
     console.log(err)
