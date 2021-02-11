@@ -5,6 +5,7 @@
   "main": "memer.js",
   "dependencies": {
     "discord.js-light": "^3.5.3",
+    "fs": "0.0.1-security",
     "mongoose": "^5.11.15"
   },
   "devDependencies": {},
