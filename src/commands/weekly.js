@@ -1,7 +1,6 @@
-//onst discord = require('discord.js-light');
+const discord = require('discord.js-light');
 const { randomNum } = require('../data/util.js');
 const util = require('../data/util.js');
-const discord = require('discord.js');
 
 module.exports = {
     name: 'weekly',
