@@ -54,7 +54,7 @@ const mongOptions = {
 memer.on('ready', async () => {
     console.log('Active')
 
-    await mong.connect(process.env.MONGOURL), (mongOptions)
+    await mong.connect(`mongodb+srv://amanvenkat:XwWt1tfY5K7suJCa@cluster0.dvsvp.mongodb.net/amanbro?retryWrites=true&w=majority`, mongOptions)
        .then(console.log('Active'))
 .catch(err) 
     console.log(err)
