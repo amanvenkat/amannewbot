@@ -46,17 +46,19 @@ const memer = new discord.Client({
     ]
 });
 
-mong
-  .connect(process.env.MONGOURL), {
+const mongOptions = {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: true,
-  }
-  .then((console) => {
-    console.log("connected to db");
-  });
+    useFindAndModify: true
+}
+memer.on('ready', async () => {
+    console.log('Active')
 
+    await mong.connect(process.env.MONGOURL), (mongOptions)
+       .then(console.log('Active'))
+.catch(err) 
+    console.log(err)
+})
 memer.login(process.env.TOKEN);
 /** commands */
 memer.commands = new discord.Collection();
