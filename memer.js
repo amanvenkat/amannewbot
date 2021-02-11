@@ -1,26 +1,13 @@
 /** packages */
 const fs = require('fs');
 const mong = require('mongoose');
-//const discord = require('discord.js-light');
+const discord = require('discord.js-light');
 //const memer = new discord.Client()
 /** config n util n models */
 //const config = require('./src/data/config.json');
 const util = require('./src/data/util.js');
 /** database */
-
-const mongOptions = {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: true
-}
-memer.on('ready', async () => {
-    console.log('Active')
-
-    await mong.connect(process.env.MONGOURL, mongOptions)
-       .then(console.log('Active'))
-})
 /** actual bot login things etc */
-const discord = require('discord.js-light');
 const memer = new discord.Client({
     cacheGuilds: true,
     cacheChannels: true,
@@ -58,6 +45,19 @@ const memer = new discord.Client({
         'VOICE_SERVER_UPDATE'
     ]
 });
+
+const mongOptions = {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: true
+}
+memer.on('ready', async () => {
+    console.log('Active')
+
+    await mong.connect(process.env.MONGOURL, mongOptions)
+       .then(console.log('Active'))
+})
+
 memer.login(process.env.TOKEN);
 /** commands */
 memer.commands = new discord.Collection();
