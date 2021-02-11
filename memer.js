@@ -51,13 +51,12 @@ const mongOptions = {
     useUnifiedTopology: true,
     useFindAndModify: true
 }
-memer.on('ready', () => {
+memer.on('ready', async () => {
     console.log('Active')
 
-mong.connect(process.env.MONGOURL, mongOptions)
+    await mong.connect(process.env.MONGOURL, mongOptions)
        .then(console.log('Active'))
 })
-
 memer.login(process.env.TOKEN);
 /** commands */
 memer.commands = new discord.Collection();
