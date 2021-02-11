@@ -47,12 +47,12 @@ const memer = new discord.Client({
 });
 
 mong
-  .connect(process.env.MONGOURL, {
+  .connect(process.env.MONGOURL), {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
-    useFindAndModify: false,
-  })
+    useFindAndModify: true,
+  }
   .then((console) => {
     console.log("connected to db");
   });
