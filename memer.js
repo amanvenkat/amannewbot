@@ -8,7 +8,7 @@ const discord = require('discord.js-light');
 const util = require('./src/data/util.js');
 /** database */
 /** actual bot login things etc */
-const memer = new discord.Client({
+const memer = discord.Client({
     cacheGuilds: true,
     cacheChannels: true,
     cacheEmojis: true,
